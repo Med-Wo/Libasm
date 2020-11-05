@@ -24,3 +24,8 @@ ssize_t		ft_write(int fd, void const *buf, size_t nbyte);
 ssize_t		ft_read(int fd, void *buf, size_t nbyte);
 char		*ft_strdup(char const *s1);
 ```
+### Comment tester la partie obligatoire  
+
+`$> make`  pour assembler la librairie libasm.a  
+`$> make test` pour creer l' executable  
+`$> ./test`  pour relancer l' executable  
