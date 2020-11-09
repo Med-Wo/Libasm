@@ -1,6 +1,6 @@
 # Libasm
 
-### L’objectif de ce projet de l' Ecole 42 (Paris) est de devenir familier avec le langage assembleur.
+### L’objectif de ce projet de l'Ecole 42 (Paris) est de devenir familier avec le langage assembleur.
 
 Le langage assembleur, souvent appellé asm, est un langage de bas niveau pour ordinateur ou autre machine programmable qui possède une très forte correspondance entre le langage et l’architecture de la machine. Chaque asm est spécifique à un ordinateur particulier. A l’opposé, les langages haut-niveau sont généralement portables sur de multiples plateformes mais nécessitent com-pilation ou interprétation. Le langage assembleur peut également être appellé langagemachine symbolique.
 
@@ -12,7 +12,7 @@ Le langage assembleur, souvent appellé asm, est un langage de bas niveau pour o
 - [x] Compiler votre code avec nasm
 - [x] Utiliser la syntaxe Intel, pas celle d’AT&T
 - [x] Verifier les erreurs lors des syscalls et les renvoyer correctement
-- [x] Permettre la lecture de la variable errno (de <errno.h>) depuisun fichier .c
+- [x] Permettre la lecture de la variable errno (de <errno.h>) depuis un fichier .c
 
 ### Partie obligatoire
 
