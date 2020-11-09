@@ -20,5 +20,17 @@ int		main(void)
 	STRLEN("$#*&@");
 	STRLEN("");
 	printf("ft_strlen(NULL)   [%ld]\n",  ft_strlen(NULL));
+
+	puts("Basic test");
+	STRCMP("Hello World", "Hello");
+	STRCMP("Hello", "Hello World");
+	STRCMP("Hello World", "Hello World");
+	puts("Unicode character");
+	STRCMP("\xfe", "\xff");
+	STRCMP("\xff", "\xfe");
+	puts("Official strcmp with this args segfault not mine");
+	printf("ft_strcmp(NULL, \"Hello World\")   [%d]\n",  ft_strcmp(NULL, "Hello World"));
+	printf("ft_strcmp(\"Hello World\", NULL)   [%d]\n",  ft_strcmp("Hello World", NULL));
+	printf("ft_strcmp(NULL, NULL)            [%d]\n",  ft_strcmp(NULL, NULL));
 	return (0);
 }

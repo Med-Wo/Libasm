@@ -29,3 +29,10 @@ char		*ft_strdup(char const *s1);
 `$> make`  pour assembler la librairie libasm.a  
 `$> make test` pour creer l' executable  
 `$> ./test`  pour relancer l' executable  
+
+### Ressources
+
+>[NASM Tutorial](https://cs.lmu.edu/~ray/notes/nasmtutorial/)
+>[Liste instruction Assembleur Intel x86](http://jeanfrederic.gosio.free.fr/Enligne/asm/asm.html#neg)
+>[Programmation Assembleur](https://fr.wikibooks.org/wiki/Programmation_Assembleur)
+>[Assembly Language Instruction set](http://vitaly_filatov.tripod.com/ng/asm/)
