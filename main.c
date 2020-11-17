@@ -1,21 +1,35 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
 #include <errno.h>
 
-size_t	ft_strlen(const char *s);
-char	*ft_strcpy(char *dest, const char *src);
+size_t	ft_strlen(const char *str);
 int 	ft_strcmp(const char *s1, const char *s2);
+char	*ft_strcpy(char *dest, const char *src);
 ssize_t	ft_write(int fd, const void *buf, size_t count);
 ssize_t ft_read(int fd, void *buf, size_t count);
 char 	*ft_strdup(const char *s);
 
+# define TEST_ERRNO(x) printf("%s\n\n", strerror(x));
 # define STRLEN(x)	printf("STR = [%s]\nstrlen      [%ld] \nft_strlen   [%ld]\n\n", x, strlen(x), ft_strlen(x));
 # define STRCMP(a, b)  printf("S1 = [%s]   S2 = [%s] \nstrcmp      [%d]\nft_strcmp   [%d]\n\n",a ,b ,strcmp(a, b), ft_strcmp(a, b));
 # define STRCPY(a, b)	printf("strcpy      [%s] \nft_strcpy   [%s]\n\n", strcpy(a, b), ft_strcpy(a, b));
-
+# define STRDUP(a)  printf("strdup      [%s] \nft_strdup   [%s]\n", strdup(a), ft_strdup(a));
 int		main(void)
 {
+	int		errsv;
+	char	buffer[29];
+	char	buffer_short[5];
+	int		i;
+
+	i = 0;
+	while (i < 29)
+		buffer[i++] = 0;
+	i = 0;
+	while (i < 5)
+		buffer_short[i++] = 0;
+	/*
 	puts("BASIC TEST");
 	STRLEN("Hello World");
 	STRLEN("0123456789abcdef");
@@ -46,5 +60,18 @@ int		main(void)
 	printf("ft_strcmp(NULL, \"Hello World\")  %s\n\n", ft_strcpy(NULL, "Hello World"));
 	printf("ft_strcmp(buffer, NULL)         [%s]\n\n", ft_strcpy(buffer, NULL));
 	printf("ft_strcmp(NULL, NULL)           %s\n\n", ft_strcpy(NULL, NULL));
+	*/
+
+	errsv = errno;
+	
+	puts("BASIC TEST");
+	STRDUP("");
+	printf("%s\n\n", strerror(errsv));
+	STRDUP("Hello World");
+	printf("%s\n\n", strerror(errsv));
+	STRDUP("yope\0la");
+	printf("%s\n\n", strerror(errsv));
+	puts("TEST SEGFAULT");
+	printf("ft_strdup(NULL)  %s\n", ft_strdup("NULL"));
 	return (0);
 }
